@@ -1,0 +1,16 @@
+REMS - start here (Windows, VS Code)
+
+1. Extract this zip, then in VS Code: File > Open Folder > choose the "rems" folder.
+2. Open Terminal and run:   npm install
+3. Supabase dashboard > SQL Editor > New query:
+   paste ALL of supabase/setup_all.sql > Run.
+   (If it says "already exists": first run supabase/reset_db.sql, then setup_all.sql again.)
+4. New query again: paste ALL of supabase/seed.sql > Run.
+5. Authentication > Sign In / Providers > Email > turn OFF "Confirm email" > Save.
+6. Open the file .env.local (in the rems folder). Put YOUR project's URL and publishable key:
+     VITE_SUPABASE_URL=...
+     VITE_SUPABASE_ANON_KEY=...
+   (Project Settings > API Keys). Save.
+7. Terminal:   npm run dev      then open http://localhost:8080
+   Any time you change .env.local, stop (Ctrl+C) and run npm run dev again.
+Demo password for the seeded accounts: Demo@1234
